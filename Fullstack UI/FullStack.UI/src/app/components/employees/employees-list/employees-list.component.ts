@@ -21,7 +21,7 @@ export class EmployeesListComponent implements OnInit {
       error: (response) => {
         console.log(response);
       }
-     })
-    }
+    })
   }
+}
 
