@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <h1 class="mb-3">Apartments</h1>
+
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Address</th>
+                <th>Price</th>
+                <th>Size</th>
+                <th>Type</th>
+                <th>Bedrooms</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let apartment of apartments">
+                <td>{{ apartment.id }}</td>
+                <td>{{ apartment.address }}</td>
+                <td>{{ apartment.price }}</td>
+                <td>{{ apartment.size }}</td>
+                <td>{{ apartment.type }}</td>
+                <td>{{ apartment.bedrooms }}</td>
+                <td><a [routerLink]="['/apartments','edit',apartment.id]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!apartments || apartments.length <= 0">No apartments found</p>
+</div>
